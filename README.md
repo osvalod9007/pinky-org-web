@@ -2,6 +2,17 @@
 
 ¡Bienvenido a Pinky, la plataforma dedicada a brindar apoyo y cuidado a los animales desamparados en Cuba! Este proyecto se ha creado con las siguientes tecnologías:
 
+<div align="center">
+
+![Astro Badge](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=fff&style=flat)
+![GitHub stars](https://img.shields.io/github.com/osvalod9007/pinky-org-web)
+![GitHub issues](https://img.shields.io/github.com/osvalod9007/pinky-org-web)
+![GitHub forks](https://img.shields.io/github.com/osvalod9007/pinky-org-web)
+![GitHub PRs](https://img.shields.io/github.com/osvalod9007/pinky-org-web)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+
+</div>
+
 - **Astro:** Un marco de trabajo moderno para el desarrollo de sitios web rápido y eficiente.
 - **TypeScript:** Un lenguaje de programación tipado que mejora la calidad del código y la productividad.
 - **Tailwind CSS:** Un marco de diseño utilitario para construir interfaces de usuario rápidas y modernas.
