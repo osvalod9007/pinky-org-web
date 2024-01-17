@@ -1,5 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PawFilled from '@/components/icons/PawFilled.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
@@ -7,6 +8,145 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="En Pinky, creemos que cada animal merece un hogar lleno de amor. Únete a nosotros en la lucha contra el abandono y el maltrato animal en Cuba. Desde reportar casos hasta adoptar a un nuevo compañero, Pinky es tu plataforma solidaria para marcar la diferencia en la vida de aquellos que no pueden hablar por sí mismos."
 >
   <main>
-    <h1>Pinky</h1>
+    <section class="relative flex h-screen items-center justify-center overflow-hidden">
+      <div
+        class="card z-10 flex
+        min-w-full flex-row items-center justify-center
+        gap-8 rounded-3xl
+        bg-gradient-to-t from-slate-500 to-slate-400
+        backdrop-blur-xl lg:min-w-[900px]"
+      >
+        <div class="z-20 flex flex-col items-center justify-center px-0 py-9 text-justify">
+          <h1 class="mb-4 text-4xl font-bold">¡Bienvenido a Pinky!</h1>
+
+          <p class="mb-6">Tu plataforma dedicada a brindar apoyo y cuidado a los animales desamparados en Cuba.</p>
+
+          <div class="flex items-center space-x-4">
+            <a href="#reportes" class="btn-primary">Reportes y Casos</a>
+            <a href="#adopciones" class="btn-primary">Adopciones</a>
+            <a href="#ayuda" class="btn-primary">Cómo Ayudar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <ul class="logo-actions-background absolute left-0 top-0 z-[1] h-full w-full overflow-hidden">
+      <li><PawFilled /></li>
+      <li><PawFilled /></li>
+      <li><PawFilled /></li>
+      <li><PawFilled /></li>
+    </ul>
+    <div class="absolute h-full w-full">
+      <PawFilled class="icon1 icon relative" />
+      <PawFilled class="icon2 icon relative" />
+      <PawFilled class="icon3 icon relative" />
+    </div>
   </main>
 </BaseLayout>
+
+<style>
+  .btn-primary {
+    @apply inline-block rounded-md bg-secondary px-4 py-2;
+    @apply text-white transition duration-300 ease-in-out hover:bg-primary;
+  }
+  .card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow:
+      0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+      0 1px 0 0 rgba(255, 255, 255, 0.261) inset,
+      0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+  .logo-actions-background li:nth-child(1),
+  .logo-actions-background li:nth-child(2),
+  .logo-actions-background li:nth-child(3),
+  .logo-actions-background li:nth-child(4) {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    transform: rotate(-180deg);
+    animation: animate 25s steps(10) infinite;
+    bottom: -80px;
+    left: 0;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon1 {
+    top: -800px;
+    left: 20%;
+    transform: scale(1.8) rotate(-45deg);
+    color: #00cee7;
+    opacity: 0.4;
+  }
+
+  .icon2 {
+    top: -600px;
+    left: 70%;
+    opacity: 0.3;
+    color: #04748c;
+    transform: scale(12) rotate(30deg);
+  }
+
+  .icon3 {
+    top: -200px;
+    left: 1%;
+    color: #00cee7;
+    transform: scale(15) rotate(-140deg);
+  }
+
+  .logo-actions-background li:nth-child(1) {
+    left: 0%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+
+  .logo-actions-background li:nth-child(2) {
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 1s;
+  }
+
+  .logo-actions-background li:nth-child(4) {
+    left: 0%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 3s;
+  }
+
+  .logo-actions-background li:nth-child(3) {
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 4s;
+  }
+
+  @keyframes animate {
+    0%,
+    20%,
+    40%,
+    60%,
+    80% {
+      opacity: 1;
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%,
+    100% {
+      opacity: 0;
+    }
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-1000px) translateX(1100px) rotate(90deg);
+    }
+  }
+</style>

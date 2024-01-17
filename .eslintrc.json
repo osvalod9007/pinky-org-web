@@ -17,6 +17,7 @@
   "plugins": ["simple-import-sort", "astro", "prettier"],
   "parserOptions": {
     "project": true,
+    "parser": "@typescript-eslint/parser",
     "extraFileExtensions": [".astro"],
     "sourceType": "module",
     "ecmaVersion": "latest"
@@ -70,12 +71,17 @@
 
   "overrides": [
     {
-      "files": "*.astro",
+      "files": ["*.astro"],
+      "plugins": ["astro"],
       "parser": "astro-eslint-parser",
       "parserOptions": {
-        "parser": "@typescript-eslint/parser"
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"],
+        "sourceType": "module"
       },
       "rules": {
+        "astro/no-conflict-set-directives": "error",
+        "astro/no-unused-define-vars-in-style": "error",
         "import/no-unresolved": "off"
       }
     }
